@@ -55,9 +55,6 @@ LIBS = -lmlx -lX11 -lXext
 
 all: $(NAME)
 
-.c.o:
-		$(CC) $(CFLAGS) -c -o $@ $<
-
 $(NAME): $(OBJS)
 		$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBS)
 

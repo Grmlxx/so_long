@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:16:21 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/03/19 03:45:25 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:18:37 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ int	animate_enemy(t_game *game)
 		game->col = 0;
 		game->row++;
 	}
-	usleep(120000);
+	usleep(95000);
 	return (1);
 }

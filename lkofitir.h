@@ -6,13 +6,14 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 02:10:55 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/03/19 03:10:27 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:42:28 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LKOFITIR_H
 # define LKOFITIR_H
 
+# include <X11/Xlib.h>
 # include <fcntl.h>
 # include <mlx.h>
 # include <stdarg.h>

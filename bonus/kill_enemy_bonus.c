@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 23:17:04 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/03/19 03:47:53 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:01:33 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	kill_enemy_left(t_game *game)
 	game->i = game->player.x * 64;
 	game->j = game->player.y * 64;
 	while (game->player.x - i >= 0 && game->map[game->player.y][game->player.x
-		- i >= 0])
+		- i])
 	{
 		if (game->map[game->player.y][game->player.x - i] == 'X')
 		{

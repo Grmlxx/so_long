@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 00:40:18 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/03/17 00:43:43 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/03/19 21:17:16 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,4 +101,10 @@ void	map_parsing(t_game *game)
 	copy_map(game);
 	check_map(game->new_map, game);
 	free_new_map(game);
+	if (game->win_height > 16 && game->win_width > 30)
+		bye_bye("Map big than screen size", game);
+	else if (game->win_height > 16)
+		bye_bye("Map height big than screen height", game);
+	else if (game->win_width > 30)
+		bye_bye("Map width big than screen width", game);
 }

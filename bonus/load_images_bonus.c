@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 16:26:58 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/03/19 03:48:05 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:05:38 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,18 +42,18 @@ void	load_enemy_sprites(t_game *game)
 	game->enemy_textures[3].img = mlx_xpm_file_to_image(game->mlx,
 			"textures/police3.xpm", &game->enemy_textures[3].width,
 			&game->enemy_textures[3].height);
-	game->enemy_textures[7].img = mlx_xpm_file_to_image(game->mlx,
-			"textures/police4.xpm", &game->enemy_textures[3].width,
-			&game->enemy_textures[3].height);
-	game->enemy_textures[6].img = mlx_xpm_file_to_image(game->mlx,
-			"textures/police5.xpm", &game->enemy_textures[3].width,
-			&game->enemy_textures[3].height);
-	game->enemy_textures[5].img = mlx_xpm_file_to_image(game->mlx,
-			"textures/police6.xpm", &game->enemy_textures[3].width,
-			&game->enemy_textures[3].height);
 	game->enemy_textures[4].img = mlx_xpm_file_to_image(game->mlx,
-			"textures/police7.xpm", &game->enemy_textures[3].width,
-			&game->enemy_textures[3].height);
+			"textures/police7.xpm", &game->enemy_textures[4].width,
+			&game->enemy_textures[4].height);
+	game->enemy_textures[5].img = mlx_xpm_file_to_image(game->mlx,
+			"textures/police6.xpm", &game->enemy_textures[5].width,
+			&game->enemy_textures[5].height);
+	game->enemy_textures[6].img = mlx_xpm_file_to_image(game->mlx,
+			"textures/police5.xpm", &game->enemy_textures[6].width,
+			&game->enemy_textures[6].height);
+	game->enemy_textures[7].img = mlx_xpm_file_to_image(game->mlx,
+			"textures/police4.xpm", &game->enemy_textures[7].width,
+			&game->enemy_textures[7].height);
 }
 
 void	load_images(t_game *game)
