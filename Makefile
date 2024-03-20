@@ -1,6 +1,7 @@
 NAME = so_long
-CC = gcc
-CFLAGS = -g -Wall -Wextra -Werror -I.
+NAME_BONUS = so_long_bonus
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -I.
 SRC = gnl/get_next_line.c \
       gnl/get_next_line_utils.c \
       printf/ft_printf.c \
@@ -59,12 +60,12 @@ $(NAME): $(OBJS)
 		$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBS)
 
 bonus: $(BOBJS)
-		$(CC) $(CFLAGS) -o $(NAME) $(BOBJS) $(LIBS)
+		$(CC) $(CFLAGS) -o $(NAME_BONUS) $(BOBJS) $(LIBS)
 
 clean:
 		$(RM) $(OBJS) $(BOBJS)
 
 fclean: clean
-		$(RM) $(NAME)
+		$(RM) $(NAME) $(NAME_BONUS)
 
 re: fclean all
