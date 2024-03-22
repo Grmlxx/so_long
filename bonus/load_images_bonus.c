@@ -6,11 +6,33 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 16:26:58 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/03/20 01:05:38 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/03/21 20:32:37 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lkofitir.h"
+
+void	no_image(t_game *game)
+{
+	game->i = 0;
+	while (game->i < 11)
+	{
+		if (game->textures[game->i].img == NULL)
+			bye_bye("Redd texture kima kant", game);
+		game->i++;
+	}
+}
+
+void	no_enemy_image(t_game *game)
+{
+	game->i = 0;
+	while (game->i < 8)
+	{
+		if (game->enemy_textures[game->i].img == NULL)
+			bye_bye("Redd texture kima kant", game);
+		game->i++;
+	}
+}
 
 void	load_images_gun_shot(t_game *game)
 {
@@ -80,5 +102,7 @@ void	load_images(t_game *game)
 			"textures/door_o.xpm", &game->textures[6].width,
 			&game->textures[6].height);
 	load_images_gun_shot(game);
+	no_image(game);
 	load_enemy_sprites(game);
+	no_enemy_image(game);
 }

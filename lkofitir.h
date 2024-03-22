@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 02:10:55 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/03/20 00:42:28 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/03/22 16:12:06 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ typedef struct s_game
 	int			fd;
 	int			new_x;
 	int			new_y;
+	int			frame;
 	char		*str;
 	char		**new_map;
 	char		*moves;
@@ -88,6 +89,7 @@ void			create_window(t_game *game);
 int				exit_game(t_game *game);
 t_game			initialize_variables(char **av);
 void			bye_bye(char *str, t_game *game);
+void			no_image(t_game *game);
 int				no_more_collectibles(t_game *game);
 void			draw_character(t_game *game);
 int				is_valid_position(int x, int y, t_game *game);
@@ -127,7 +129,9 @@ void			kill_enemy_right(t_game *game);
 void			kill_enemy_left(t_game *game);
 void			kill_enemy_down(t_game *game);
 void			kill_enemy_up(t_game *game);
-int				animate_enemy(t_game *game);
 void			free_enemy_images(t_game *game);
+void			no_enemy_image(t_game *game);
+int				animate_enemy(t_game *game);
+int				find_enemy(t_game *game);
 
-#endif
+#endif	

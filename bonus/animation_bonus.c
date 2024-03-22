@@ -6,16 +6,14 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:16:21 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/03/20 01:18:37 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/03/22 16:22:46 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <lkofitir.h>
 
-int	animate_enemy(t_game *game)
+int	find_enemy(t_game *game)
 {
-	static int	frame;
-
 	game->row = 0;
 	while (game->map[game->row])
 	{
@@ -25,9 +23,8 @@ int	animate_enemy(t_game *game)
 			if (game->map[game->row][game->col] == 'X')
 			{
 				mlx_put_image_to_window(game->mlx, game->win,
-					game->enemy_textures[frame].img, game->col * 64, game->row
-					* 64);
-				frame = (frame + 1) % 8;
+					game->enemy_textures[game->frame].img, game->col * 64,
+					game->row * 64);
 			}
 			game->col++;
 		}
@@ -35,5 +32,14 @@ int	animate_enemy(t_game *game)
 		game->row++;
 	}
 	usleep(95000);
-	return (1);
+	return (0);
+}
+
+int	animate_enemy(t_game *game)
+{
+	find_enemy(game);
+	game->frame++;
+	if (game->frame == 8)
+		game->frame = 0;
+	return (0);
 }

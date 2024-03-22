@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 00:45:44 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/03/19 03:19:20 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/03/22 16:13:47 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	handle_game_logic(t_game *game)
 	if (game->map[game->player.y][game->player.x] == 'E'
 		&& no_more_collectibles(game) == 0)
 	{
-		ft_printf("\n\tMbroook 3lik a sat rb7ti hh\n\n");
+		ft_printf("\n\t****Mbroook 3lik a sat rb7ti hh****\n\n");
 		exit_game(game);
 	}
 }

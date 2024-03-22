@@ -6,11 +6,22 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 16:26:58 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/03/15 03:04:00 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/03/21 20:29:15 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lkofitir.h"
+
+void	no_image(t_game *game)
+{
+	game->i = 0;
+	while (game->i < 7)
+	{
+		if (game->textures[game->i].img == NULL)
+			bye_bye("Redd texture kima kant", game);
+		game->i++;
+	}
+}
 
 void	load_images(t_game *game)
 {
@@ -35,4 +46,5 @@ void	load_images(t_game *game)
 	game->textures[6].img = mlx_xpm_file_to_image(game->mlx,
 			"textures/door_o.xpm", &game->textures[6].width,
 			&game->textures[6].height);
+	no_image(game);
 }
