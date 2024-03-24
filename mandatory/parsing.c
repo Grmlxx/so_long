@@ -6,7 +6,7 @@
 /*   By: alamaoui <alamaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 00:40:18 by alamaoui          #+#    #+#             */
-/*   Updated: 2024/03/24 02:56:28 by alamaoui         ###   ########.fr       */
+/*   Updated: 2024/03/24 20:40:33 by alamaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	check_ber(char **av, t_game *game)
 	while (av[1][game->i])
 		game->i++;
 	if (av[1][game->i - 1] == 'r' && av[1][game->i - 2] == 'e' && av[1][game->i
-		- 3] == 'b')
+		- 3] == 'b' && av[1][game->i - 4] == '.')
 		return (0);
 	else
 	{
